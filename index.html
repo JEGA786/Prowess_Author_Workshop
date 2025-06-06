@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How To Publish & Promote A Book - Workshop</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary: #3252a2;
+        --secondary: #fa735b;
+        --accent: #8ca752;
+        --light: #f8f9fa;
+        --dark: #212529;
+      }
+      .content-container {
+        background: #d5f59445;
+        padding-bottom: 50px;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.8;
+        /* color: var(--dark);
+        background-color: #fefefe; */
+      }
+      .heading-text {
+        color: var(--accent);
+      }
+      h1,
+      h2 {
+        font-family: "Libre Baskerville", serif;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 3rem !important;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+      }
+
+      h2 {
+        color: var(--primary);
+        font-size: 1.8rem;
+        margin: 3rem 0 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 3px solid var(--secondary);
+        position: relative;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      /* Overlay gradient for readability */
+      .video-background .overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+      }
+
+      /* Responsive video adjustments */
+      .video-background video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Ensuring proper stacking of content */
+      .video-background .z-2 {
+        z-index: 2;
+      }
+
+      .presenter {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0;
+      }
+
+      .lead {
+        font-size: 1.25rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        color: #444;
+      }
+
+      .event-highlight {
+        background-color: rgba(214, 40, 40, 0.08);
+        border-left: 4px solid var(--secondary);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .event-date {
+        font-weight: 600;
+        color: var(--secondary);
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .event-address {
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .content-card {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.196);
+        border-top: 3px solid var(--accent);
+      }
+
+      ul.content-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 1rem 0;
+      }
+
+      ul.content-list li {
+        padding: 0.8rem 0 0.8rem 2.2rem;
+        position: relative;
+        font-size: 1.1rem;
+        border-bottom: 1px dashed #eee;
+      }
+
+      ul.content-list li:last-child {
+        border-bottom: none;
+      }
+
+      ul.content-list li:before {
+        content: "→";
+        color: var(--secondary);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+      }
+
+      .benefit-icon {
+        color: var(--secondary);
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .benefit-text {
+        flex-grow: 1;
+      }
+
+      .cta-box {
+        background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
+        color: white;
+        padding: 3rem;
+        border-radius: 8px;
+        text-align: center;
+        margin: 4rem 0 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.181);
+      }
+
+      .cta-text {
+        font-size: 1.4rem;
+        margin-bottom: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .btn-cta {
+        background-color: var(--secondary);
+        color: white;
+        font-weight: 600;
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 50px;
+        transition: all 0.3s;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(214, 40, 40, 0.3);
+      }
+
+      .btn-cta:hover {
+        color: var(--light);
+        background-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(141, 214, 40, 0.4);
+      }
+      .timer-section {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.17);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10.9px);
+        -webkit-backdrop-filter: blur(10.9px);
+        border: 1px solid rgba(255, 255, 255, 0.46);
+      }
+      #timer {
+        display: flex;
+        gap: 6rem;
+        text-align: center;
+      }
+      .time-section span {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .time-label {
+        font-size: 0.875rem;
+      }
+      /* Footer Styles */
+      .footer {
+        background: linear-gradient(135deg, #f3feda 0%, #8ca752 100%);
+        color: rgb(52, 51, 51);
+        padding: 3rem 0 2rem;
+        /* margin-top: 4rem; */
+      }
+
+      .footer-logo {
+        font-family: "Libre Baskerville", serif;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: rgba(0, 0, 0, 0.7);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary);
+        padding-left: 5px;
+      }
+
+      .social-icons {
+        margin-top: 1.5rem;
+      }
+
+      .social-icons a {
+        color: rgb(54, 53, 53);
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 20px;
+        transition: all 0.3s;
+        text-decoration: none;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      .social-icons a:hover {
+        background-color: var(--accent);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(31, 31, 31, 0.386);
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        #timer {
+          gap: 3rem;
+        }
+        .header {
+          padding: 3rem 0 2rem;
+        }
+        .content-card {
+          padding: 1.5rem;
+        }
+        .footer {
+          text-align: center;
+        }
+        .social-icons {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section with Video Background -->
+    <section class="video-background position-relative text-white">
+      <video
+        autoplay
+        muted
+        loop
+        class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+      >
+        <source
+          src="/video/0_Woman_Reading_3840x2160 (2).mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- Overlay for better text readability -->
+      <div class="overlay position-absolute top-0 start-0 w-100 h-100">
+        <img
+          data-aos="zoom-out"
+          data-aos-duration="1500"
+          src="/images/Prowess New Logo White.png"
+          alt="Prowess Logo"
+          style="
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            z-index: 2;
+            max-width: 250px;
+          "
+        />
+      </div>
+
+      <!-- Hero Content -->
+      <div
+        class="container position-relative z-2 d-flex flex-column justify-content-center align-items-center text-center"
+        style="height: 100vh"
+      >
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="heading-text display-3 fs-0 fw-bold mb-3"
+        >
+          How To Publish & Promote A Book
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1500" class="">
+          PRESENTED BY PROWESS PUBLISHING
+        </p>
+      </div>
+    </section>
+
+    <div class="container-fluid content-container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="lead text-center"
+          >
+            Are you an aspiring author or a published writer looking to elevate
+            your craft and publishing knowledge? Join us for a free,
+            power-packed workshop designed to guide, inspire, and support
+            authors at every stage of their journey.
+          </p>
+
+          <!-- timier------------- -->
+          <section
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            class="timer-section py-3 d-flex flex-column justify-content-start align-items-center"
+          >
+            <h3 data-aos="fade-up" data-aos-duration="1500">Event Starts By</h3>
+            <div data-aos="fade-up" data-aos-duration="2000" id="timer">
+              <div class="time-section">
+                <span id="days">0</span>
+                <div class="time-label">days</div>
+              </div>
+              <div class="time-section">
+                <span id="hours">0</span>
+                <div class="time-label">hours</div>
+              </div>
+              <div class="time-section">
+                <span id="minutes">0</span>
+                <div class="time-label">minutes</div>
+              </div>
+              <div class="time-section">
+                <span id="seconds">0</span>
+                <div class="time-label">seconds</div>
+              </div>
+            </div>
+          </section>
+
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="event-highlight"
+          >
+            <h2 data-aos="fade-left" data-aos-duration="1500">Event Details</h2>
+            <div class="event-detail">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                class="d-flex justify-content-start"
+              >
+                <p class="event-date text-danger text-lg-start text-center">
+                  <i class="fas text-danger fa-calendar-day mx-2"></i> Saturday,
+                  June 14th, 2025
+                </p>
+              </div>
+            </div>
+            <div class="event-detail">
+              <div>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  class="event-address text-lg-start text-center"
+                >
+                  <strong>
+                    <i class="fas text-danger fs-4 mx-2 fa-map-marker-alt"></i>
+                    2nd floor, GJ Complex, No: 2126, Thadikara Samy Koli St,
+                    Alandur, Guindy, Chennai, Tamil Nadu 600016
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1500" class="content-card">
+            <h2>Who This Event Is for</h2>
+            <ul class="content-list">
+              <li>Aspiring writers working on their first book</li>
+              <li>Aspiring writers planning to write a book in the future</li>
+              <li>Indie authors</li>
+              <li>
+                Traditionally published authors looking to increase book sales
+              </li>
+              <li>
+                Traditionally published authors interested in self-publishing
+                under a different pen name
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1500" class="content-card">
+            <h2>What You'll Learn</h2>
+            <ul class="content-list">
+              <li>
+                How to write and structure a book that connects with readers
+              </li>
+              <li>Insider tips on editing, formatting, and self-publishing</li>
+              <li>
+                Proven strategies to market and sell your book effectively
+              </li>
+              <li>How to build your personal author brand</li>
+              <li>Q&A session with publishing and marketing experts</li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1500" class="content-card">
+            <h2>Why Attend?</h2>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">
+                <strong>Completely Free:</strong> No charges, no hidden costs
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">
+                <strong>Expert Guidance:</strong> Learn from industry
+                professionals
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">
+                <strong>Live Interaction:</strong> Ask questions, get real-time
+                answers
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <div class="benefit-text">
+                <strong>Exclusive Resources:</strong> Workshop attendees get
+                free templates, and Self Publishing guides
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1500" class="cta-box">
+            <p class="cta-text">
+              <strong>Seats are limited. Secure your spot now!</strong>
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd2dBbIp-gV4dWtp8jJHPNaj3cAyMt8v5GyiTWokNZdugFjuA/viewform?usp=header"
+              ><button
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="btn btn-cta btn-lg"
+              >
+                SIGN UP FOR THE WORKSHOP
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer data-aos="zoom-in" data-aos-duration="1500" class="footer">
+      <div class="container p-2">
+        <div class="row">
+          <div class="col-md-5 mb-4 mb-md-0">
+            <img
+              src="/images/logo.webp"
+              alt="Prowess Logo"
+              style="
+                /* position: absolute; */
+                top: 20px;
+                left: 30px;
+                z-index: 2;
+                max-width: 250px;
+              "
+            />
+            <p class="mt-3 col-11">
+              Helping authors succeed in their publishing journey with expert
+              guidance and resources.
+            </p>
+            <div class="social-icons d-flex">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/prowesspublishing"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a target="_blank" href="https://twitter.com/Prowesspub"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/prowesspublishing/?hl=en"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/prowess-publishing-&amp;-software-solutions"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCJ1oXigyQKcHee6HqSbQ2sw"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4 mb-md-0">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a target="_blank" href="https://www.prowesspub.com/">Home</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.prowesspub.com/events"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.prowesspub.com/Typing-services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.prowesspub.com/about-us.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4 mb-md-0">
+            <h3>Resources</h3>
+            <ul class="footer-links">
+              <li>
+                <a target="_blank" href="http://blog.prowesspub.com/">Blog</a>
+              </li>
+              <li>
+                <a href="/how-to-publish-your-book.html">Publish Your Book</a>
+              </li>
+              <li>
+                <a
+                  href="http://blog.prowesspub.com/category/authors-speak"
+                  target="_blanck"
+                  >Authors Corner</a
+                >
+              </li>
+              <li>
+                <a target="_blanck" href="/book-publishing-faq.html">Faq</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@prowesspublishing.com
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center copyright text-dark">
+            <p>&copy; 2025 Prowess Publishing. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      const eventDate = new Date("2025-06-14T24:00:00").getTime();
+      const daysSpan = document.getElementById("days");
+      const hoursSpan = document.getElementById("hours");
+      const minutesSpan = document.getElementById("minutes");
+      const secondsSpan = document.getElementById("seconds");
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+          document.body.innerHTML = "The event has started!";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysSpan.textContent = days;
+        hoursSpan.textContent = hours;
+        minutesSpan.textContent = minutes;
+        secondsSpan.textContent = seconds;
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+
+      AOS.init({
+        // duration: 1000, // Animation duration in milliseconds
+        once: false, // Whether animation should happen only once
+        offset: 120, // Offset (in px) from the original trigger point
+        easing: "ease-in-out", // Default easing for AOS animations
+      });
+    </script>
+  </body>
+</html>
